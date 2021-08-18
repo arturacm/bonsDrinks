@@ -14,31 +14,27 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <Header/>
+              <div className= "meiuca">
           <Switch >
             <Route path="/" exact>
 
-              <div className= "meiuca">
                 <Drinks />
-              </div>
             </Route>
             <Route path="/contato">
               
                 <Form/>
-                <Button/>
+                <Button texto= "Clique Aqui"/>
                 <h1> Olá mundo</h1>
               
             </Route>
-            <Route path="/jojo" exact>
-
-                <h1> 404 muda muda muda muda muda muda</h1>
-              
-            </Route>
+            
             <Route path="*">
     
-                <h1> 404 muthafoca</h1>
+                <h1> 404 Not Found</h1>
               
             </Route>
           </Switch>
+              </div>
         </Router>
           <Footer/>
       </div>
