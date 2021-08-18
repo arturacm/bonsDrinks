@@ -1,25 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Button from './components/Button';
+import Form from './components/Form';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Drinks from './components/Drinks';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  render(){
+    return (
+      <div className="App">
+        <Router>
+          <Header/>
+          <Switch >
+            <Route path="/" exact>
+
+              <div className= "meiuca">
+                <Drinks />
+              </div>
+            </Route>
+            <Route path="/contato">
+              
+                <Form/>
+                <Button/>
+                <h1> Olá mundo</h1>
+              
+            </Route>
+            <Route path="/jojo" exact>
+
+                <h1> 404 muda muda muda muda muda muda</h1>
+              
+            </Route>
+            <Route path="*">
+    
+                <h1> 404 muthafoca</h1>
+              
+            </Route>
+          </Switch>
+        </Router>
+          <Footer/>
+      </div>
+    );
+  }
 }
 
 export default App;
