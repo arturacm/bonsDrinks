@@ -33,6 +33,9 @@ class Button extends React.Component{
     componentDidUpdate(){
         console.log(`${this.props.texto} foi atualizado`);
     }
+    componentWillUnmount(){
+        console.log("Tchau botao");
+    }
 }
 
 export default Button;

@@ -34,4 +34,7 @@ export default class Drinks extends Component {
             this.setState({dados: json.drinks})
         })
     }
+    componentWillUnmount(){
+        console.log("Tchau drinks");
+    }
 }
