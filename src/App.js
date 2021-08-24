@@ -23,7 +23,7 @@ class App extends React.Component {
             <Route path="/contato">
               
                 <Form/>
-                <Button texto= "Clique Aqui"/>
+                <Button texto= "Clique Aqui" cor="azul"/>
                 <h1> Olá mundo</h1>
               
             </Route>

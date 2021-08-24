@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-class Form extends React.Component{
-    render(){
-        return(<form className="formulario">
-            <input type="text" placeholder="testando aqui" />
-            <input type="text" placeholder="testando E aqui" />
-            <input type="text" placeholder="testando E aqui TBM" />
-            <input type="button" value="submit" />
-
-        </form>)
+function Form () {
+    const [label, setLabel] = useState("Teste")
+    const novoValor = (event)=> {
+        setLabel(event.target.value)
+        console.log(event,event.target)
     }
+    return(
+        <form className="formulario">
+        <input type="text" onChange={novoValor} placeholder="testando aqui" />
+        {/* <input type="text" placeholder="Função" />
+        <input type="text" placeholder="braba" /> */}
+        <h1>{label}</h1>
+        <input type="button" value="submit" />
+
+    </form>)
 }
+
 
 export default Form;
