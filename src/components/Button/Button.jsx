@@ -1,9 +1,18 @@
-import React , {useState} from 'react'
+import React , { useState, useEffect }  from 'react'
 import style from './Button.module.css'
 
 function Button (props){
     const [disabled, setDisabled] = useState(false)
-    console.log(props)
+    // console.log(props)
+
+    useEffect(()=>{
+        console.log("algo aconteceu no botao")
+    })
+    
+    useEffect(()=>{
+        console.log("botao foi montado")
+    },[])
+
     function clique(){
         setDisabled(true);
         setTimeout(()=>{
