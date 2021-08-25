@@ -9,10 +9,13 @@ class Header extends React.Component{
         <header className={`${style.cabecalho}  flex`}>
                 <Link to="/">Logo</Link>
                 
-                <nav>
-                    <Link to="/">Drinks</Link> 
-                    <Link to="/contato">Contatos</Link>
-                </nav>
+                
+                <Link to="/">Drinks</Link> 
+                
+                <Link to="/randomDrink">Receita Aleatória</Link> 
+                
+                <Link to="/contato">Contatos</Link>
+                
         </header>)
     }
 }

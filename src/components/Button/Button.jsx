@@ -6,8 +6,8 @@ function Button (props){
     // console.log(props)
 
     useEffect(()=>{
-        console.log("algo aconteceu no botao")
-    })
+        console.log("estado do botao mudou")
+    },[disabled])
     
     useEffect(()=>{
         console.log("botao foi montado")
@@ -18,7 +18,7 @@ function Button (props){
         setTimeout(()=>{
             setDisabled(false)
         },3000)
-        console.log("A cor do props foi "+ props.cor);
+        // console.log("A cor do props foi "+ props.cor);
     }
 
     return(
