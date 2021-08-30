@@ -5,7 +5,16 @@ const Corpo = styled.main`
     display: flex;
     flex-direction:column;
     align-items:center;
-
+    .infos{
+        display: flex;
+        justify-content:center
+    }
+    .infos h4{
+        width: 40%;
+    }
+    .infos table{
+        width: 40%;
+    }
     img{
         height:100px;
     }
@@ -42,19 +51,25 @@ function RandomDrink() {
                 return(
                 <>
                     <h1>{drink.strDrink}</h1>
-                    <img src={drink.strDrinkThumb}/>
+                    <img src={drink.strDrinkThumb} alt={`imagem do drink ${drink.strDrink}`}/>
+                    <div className="infos">
                     <table>
                         <th>Ingrediente</th>
                         <th>Quantidade</th>
-                        {ingredientes.map((ingrediente,i)=>{
-                            return(
-                                <tr key={i}>
-                                    <td>{ingrediente.strIngredient}</td>
-                                    <td>{ingrediente.strMeasure}</td>
-                                </tr>
-                            )
-                        })}
+                        <tbody>
+                            {ingredientes.map((ingrediente,i)=>{
+                                return(
+                                    <tr key={i}>
+                                        <td>{ingrediente.strIngredient}</td>
+                                        <td>{ingrediente.strMeasure}</td>
+                                    </tr>
+                                )
+                            })}
+
+                        </tbody>
                     </table>
+                        <h4>{drink.strInstructions}</h4>
+                    </div>
                 </>
                 )
             }):"Carregando..."}

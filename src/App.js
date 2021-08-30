@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Drinks from './components/Drinks';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import RandomDrink from './components/RandomDrink/RandomDrink';
+import DrinksPopulares from './components/DrinksPopulares/DrinksPopulares';
 
 
 class App extends React.Component {
@@ -32,7 +33,9 @@ class App extends React.Component {
                 <h1> Olá mundo</h1>
               
             </Route>
-            
+            <Route path="/drinks/*">
+              <DrinksPopulares/>
+            </Route>
             <Route path="*">
     
                 <h1> 404 Not Found</h1>
